@@ -1,0 +1,94 @@
+
+/* Ventana de detalles VOLTIX */
+
+.fondo-detalle {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    background: rgba(0, 0, 0, .76);
+}
+
+.fondo-detalle[hidden] {
+    display: none;
+}
+
+.modal-detalle {
+    position: fixed;
+    z-index: 1101;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(92vw, 520px);
+    max-height: 88vh;
+    overflow-y: auto;
+    background: #101a2b;
+    border: 1px solid #34445c;
+    border-radius: 18px;
+    padding: 26px;
+    box-shadow: 0 25px 90px rgba(0, 0, 0, .55);
+    color: #f7faff;
+}
+
+.modal-detalle[inert] {
+    display: none;
+}
+
+.detalle-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.detalle-titulo {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    margin: 14px 0;
+}
+
+.detalle-descripcion {
+    line-height: 1.7;
+    color: #cad4e5;
+    margin: 12px 0;
+}
+
+.detalle-dato {
+    color: #b8c6d9;
+    margin: 12px 0;
+}
+
+.detalle-precio {
+    display: block;
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 18px 0 8px;
+}
+
+.detalle-agregar {
+    width: 100%;
+    margin-top: 18px;
+}
+
+.boton-ver-detalle {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    padding: 12px;
+    border: 1px solid #4397f8;
+    background: transparent;
+    border-radius: 9px;
+    color: #80bcff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.boton-ver-detalle:hover,
+.boton-ver-detalle:focus-visible {
+    background: rgba(67, 151, 248, .15);
+}
+
+body.detalle-abierto {
+    overflow: hidden;
+}
