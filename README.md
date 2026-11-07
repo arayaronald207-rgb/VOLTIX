@@ -40,11 +40,25 @@ Los datos se intercambian mediante JSON.
 - `css/estilos.css`: diseño de la página.
 - `css/detalles.css`: estilos de la ventana de detalles.
 
-## Ejecución del proyecto
+## Configuración de la API
 
-Para ejecutar el proyecto se necesita un servidor local con PHP, como XAMPP.
+El proyecto utiliza `config.php` para definir la dirección de la API y su clave de acceso.
 
-También es necesario configurar el archivo `config.php` con la URL y la clave de acceso a la API, ya que este archivo no se incluye en el repositorio por seguridad.
+Este archivo no se incluye en el repositorio porque contiene una credencial privada. Para ejecutar el proyecto, crea un archivo llamado `config.php` en la misma carpeta que `api.php`, con este contenido:
+
+```php
+<?php
+
+// Dirección de la API del profesor.
+define('API_URL', 'https://darkred-rook-511555.hostingersite.com/api/v1');
+
+// Reemplazar por una clave válida proporcionada por el profesor.
+define('API_KEY', 'TU_CLAVE_API');
+```
+
+El archivo `api.php` carga esta configuración y utiliza la clave en el encabezado `X-API-Key` para comunicarse con la API externa.
+
+La aplicación debe ejecutarse mediante un servidor con PHP y las extensiones cURL y mbstring habilitadas, por ejemplo, XAMPP. No basta con abrir `index.php` directamente en el navegador.
 
 ## Autor
 
