@@ -60,6 +60,10 @@ El archivo `api.php` carga esta configuración y utiliza la clave en el encabeza
 
 La aplicación debe ejecutarse mediante un servidor con PHP y las extensiones cURL y mbstring habilitadas, por ejemplo, XAMPP. No basta con abrir `index.php` directamente en el navegador.
 
+## Link de acceso al sistema
+
+   http://localhost/nexus_store/
+
 ## Autor
 
 Ronald Araya
